@@ -21,6 +21,9 @@ class Cart
     public function addProduct($product)
     {
         $cartItem = new CartItem($product, 1);
+
+        $this->items[$product->getId()] = $cartItem;
+
         return $cartItem;
     }
 

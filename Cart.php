@@ -49,5 +49,10 @@ class Cart
     //VG: Tänk på att ett cartitem kan ha olika quantity
     public function getTotalSum()
     {
+        $cartTotalSum = 0;
+        foreach ($this->items as $item) {
+            $cartTotalSum += $item->getProduct()->getPrice() * $item->getQuantity();
+        }
+        return $cartTotalSum;
     }
 }

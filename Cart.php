@@ -17,6 +17,8 @@ class Cart
      */
     public function addProduct($product)
     {
+        $cartItem = new CartItem($product, 1);
+        return $cartItem;
     }
 
 

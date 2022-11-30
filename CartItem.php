@@ -7,6 +7,11 @@ class CartItem
     private int $quantity;
 
     // TODO Skriv en konstruktor som sätter alla properties
+    function __construct($product, $quantity)
+    {
+        $this->product = $product;
+        $this->quantity = $quantity;
+    }
 
     // TODO Skriv getters för alla properties
 

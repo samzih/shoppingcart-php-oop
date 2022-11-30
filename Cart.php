@@ -31,6 +31,7 @@ class Cart
     //Skall ta bort en produkt ur kundvagnen (använd unset())
     public function removeProduct($product)
     {
+        unset($this->items[$product->getId()]);
     }
 
     //Skall returnera totala antalet produkter i kundvagnen

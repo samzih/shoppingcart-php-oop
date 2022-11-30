@@ -14,8 +14,14 @@ class CartItem
     }
 
     // TODO Skriv getters för alla properties
+    function getProduct() {
+        return $this->product;
+    }
 
-
+    function getQuantity() {
+        return $this->quantity;
+    }
+    
     //VG: Skall utöka antalet på ett cartItem med 1. 
     //VG: Det skall inte vara möjligt att utöka så att antalet överstiger produktens $inStock.
     public function increaseQuantity()
